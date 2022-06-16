@@ -25,6 +25,7 @@ public class QuoteProcessor {
     public Quote process(String quoteRequest) throws InterruptedException {
         // simulate some hard working task
         Thread.sleep(200);
+        System.out.println("Incoming data is " + quoteRequest);
         return new Quote(quoteRequest, random.nextInt(100));
     }
 }
