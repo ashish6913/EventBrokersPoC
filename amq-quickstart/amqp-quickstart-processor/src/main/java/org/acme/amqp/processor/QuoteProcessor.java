@@ -24,6 +24,7 @@ public class QuoteProcessor {
     @Blocking                   // <3>
     public Quote process(String quoteRequest) throws InterruptedException {
         // simulate some hard working task
+        System.out.println("Incoming message is" + quoteRequest);
         Thread.sleep(200);
         return new Quote(quoteRequest, random.nextInt(100));
     }
